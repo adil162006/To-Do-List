@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    padding: 40px 30px 70px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 i {
+    margin-left: 10px;
+    color: #4e085f;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 30px;
+    background: #4e085f;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #360442;
+}
+
+.task-filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    background: #edeef0;
+    color: #4e085f;
+}
+
+.filter-btn.active {
+    background: #4e085f;
+    color: #fff;
+}
+
+#list-container {
+    list-style: none;
+}
+
+#list-container li {
+    padding: 12px 8px 12px 50px;
+    font-size: 17px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 10px;
+    background: #f8f8f8;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+#list-container li::before {
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle></svg>');
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 12px;
+}
+
+#list-container li.checked {
+    color: #555;
+    text-decoration: line-through;
+    background: #e9ecef;
+}
+
+#list-container li.checked::before {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%234e085f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>');
+}
+
+#list-container li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+#list-container li span:hover {
+    background: #edeef0;
+}
+
+.clear-btn {
+    width: 100%;
+    margin-top: 20px;
+    background: #dc3545;
+}
+
+.clear-btn:hover {
+    background: #bb2d3b;
+}

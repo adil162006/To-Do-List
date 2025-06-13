@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Todo List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <h2>Todo List <i class="fas fa-list"></i></h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your task">
+                <button id="add-btn">Add</button>
+            </div>
+            <div class="task-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="pending">Pending</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+            <ul id="list-container"></ul>
+            <button class="clear-btn" id="clear-all">Clear All</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
